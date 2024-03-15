@@ -4,7 +4,7 @@
 
 ## Lista de exercícios 01
 
-### Exercício 3
+### Exercício 1
 Respresente, em fluxo grama e pseudocódigo, um algorítimo para determinar se um número inteiro é positivo, par ou ímpar.
 
 #### Fluxograma
