@@ -101,7 +101,17 @@ Atualize o algoritmo para determinar se um número inteiro e positivo é par ou 
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+A([INICIO]) --> B{{Digite um número:}}
+B --> C[\numero\]
+C --> D{numero >= 0}
+D --FALSE--> E[O número não é positivo!]
+D --TRUE--> F[resto = numero % 2]
+E --> Z([FIM])
+F --> G{resto == 0}
+G --FALSE--> H{{O número é impar!}}
+G --TRUE--> I{{O número é par!}}
+H --> Z
+I --> Z
 ```
 
 #### Pseudocódigo (1.0 ponto)
