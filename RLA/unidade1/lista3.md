@@ -103,12 +103,12 @@ Atualize o algoritmo para determinar se um número inteiro e positivo é par ou 
 flowchart TD
 A([INICIO]) --> B{{Digite um número:}}
 B --> C[\numero\]
-C --> D{numero >= 0}
-D --FALSE--> E[O número não é positivo!]
-D --TRUE--> F[resto = numero % 2]
+C --> D{numero < 0}
+D --TRUE--> E[O número não é positivo!]
 E --> Z([FIM])
+D --FALSE--> F[resto = numero % 2]
 F --> G{resto == 0}
-G --FALSE--> H{{O número é impar!}}
+G --FALSE--> H{{O número é ímpar!}}
 G --TRUE--> I{{O número é par!}}
 H --> Z
 I --> Z
@@ -118,6 +118,21 @@ I --> Z
 
 ```
 Algoritmo ClassificaCategoria
+2  DECLARE numero, resto: INTEIRO
+3  INICIO
+4  ESCREVA "Digite um número: "
+5  LEIA numero
+6  SE numero < 0 ENTÃO
+7    ESCREVA "O número não é positivo!"
+8  SENÃO
+9    resto ← numero % 2
+10   SE resto == 0 ENTÃO
+11     ESCREVA "O número é par!"
+12   SENÃO
+13     ESCREVA "O número é ímpar!"
+14   FIM_SE
+15 FIM_SE
+16 ESCREVA "FIM"
 FIM_ALGORITMO
 ```
 
