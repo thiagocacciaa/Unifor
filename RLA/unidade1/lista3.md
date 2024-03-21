@@ -138,10 +138,19 @@ FIM_ALGORITMO
 
 #### Teste de mesa (0.5 ponto)
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| it | numero | resto | Mensagem                       |
+|----|--------|-------|--------------------------------|
+| 1  | -5     | -1    | O número não é positivo!       |
+| 2  | -4     | 0     | O número não é positivo!       |
+| 3  | -3     | -1    | O número não é positivo!       |
+| 4  | -2     | 0     | O número não é positivo!       |
+| 5  | -1     | -1    | O número não é positivo!       |
+| 6  | 0      | 0     | O número é par!                |
+| 7  | 1      | 1     | O número é ímpar!              |
+| 8  | 2      | 0     | O número é par!                |
+| 9  | 3      | 1     | O número é ímpar!              |
+| 10 | 4      | 0     | O número é par!                |
+| 11 | 5      | 1     | O número é ímpar!              |
 
 ### Exercício 02 (2.5 pontos)
 Faça um algoritmo que exiba na tela uma contagem de 0 até 30, exibindo apenas os múltiplos de 3.
@@ -150,14 +159,33 @@ Faça um algoritmo que exiba na tela uma contagem de 0 até 30, exibindo apenas 
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+A([INICIO]) --> B{{Contagem de Múltiplos de 3}}
+B --> C{{Inicializar contador i = 0}}
+C --> D{i <= 30}
+D --TRUE--> E{ i é múltiplo de 3?}
+E --TRUE--> F{Exibir i}
+F --> G{Incrementar i}
+G --> C
+E --FALSE--> G
+D --FALSE--> Z([FIM])
 ```
 
 #### Pseudocódigo (1.0 ponto)
 
 ```
-Algoritmo ClassificaCategoria
-FIM_ALGORITMO
+1  Algoritmo ExibeMultiplosDeTres
+2  DECLARE i: INTEIRO
+3  INICIO
+4  ESCREVA "Contagem de Múltiplos de 3"
+5  i ← 0
+6  ENQUANTO i <= 30 FAÇA
+7    SE i % 3 == 0 ENTÃO
+8      ESCREVA i
+9    FIM_SE
+10   i ← i + 1
+11 FIM_ENQUANTO
+12 ESCREVA "FIM"
+13 FIM_ALGORITMO
 ```
 
 #### Teste de mesa (0.5 ponto)
