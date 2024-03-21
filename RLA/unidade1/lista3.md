@@ -284,19 +284,47 @@ Ex. Foram lidas 14 notas. A média aritmética é 6.75!
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+A([INICIO]) --> B{{Leitura de Notas}}
+B --> C{{Inicializar soma = 0}}
+C --> D{{Inicializar contador de notas = 0}}
+D --> E{Leitura da próxima nota}
+E --> F{Nota negativa?}
+F --TRUE--> G{Calcular média e exibir resultados}
+G --> Z([FIM])
+F --FALSE--> H{Adicionar nota à soma e incrementar contador}
+H --> D
 ```
 
 #### Pseudocódigo (1.0 ponto)
 
 ```
-Algoritmo ClassificaCategoria
-FIM_ALGORITMO
+1  Algoritmo CalcularMediaNotas
+2  DECLARE nota, soma, contador: INTEIRO
+3  INICIO
+4    soma ← 0
+5    contador ← 0
+6    ESCREVA "Digite as notas dos alunos (digite uma nota negativa para encerrar):"
+7    LEIA nota
+8    ENQUANTO nota >= 0 FAÇA
+9      soma ← soma + nota
+10     contador ← contador + 1
+11     LEIA nota
+12   FIM_ENQUANTO
+13   SE contador > 0 ENTÃO
+14     media ← soma / contador
+15     ESCREVA "Foram lidas ", contador, " notas. A média aritmética é ", media, "!"
+16   SENÃO
+17     ESCREVA "Nenhuma nota foi lida!"
+18   FIM_SE
+19 FIM_ALGORITMO
 ```
 
 #### Teste de mesa (0.5 ponto)
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| it | nota | soma | contador | média | Mensagem                                            |
+|----|------|------|----------|-------|-----------------------------------------------------|
+| 1  | 12   | 12   | 1        | -     | (não exibido - soma e contador inicializados)      |
+| 2  | 17   | 29   | 2        | -     | (não exibido - soma e contador atualizados)        |
+| 3  | 4    | 33   | 3        | -     | (não exibido - soma e contador atualizados)        |
+| 4  | -6   | 33   | 3        | -     | (não exibido - nota negativa)                      |
+| 5  | -    | 33   | 3        | -     | Foram lidas 3 notas. A média aritmética é 11.0!    |
