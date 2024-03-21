@@ -117,7 +117,7 @@ I --> Z
 #### Pseudocódigo (1.0 ponto)
 
 ```
-Algoritmo ClassificaCategoria
+1 Algoritmo ExibeMultiplosDeTres
 2  DECLARE numero, resto: INTEIRO
 3  INICIO
 4  ESCREVA "Digite um número: "
@@ -133,7 +133,7 @@ Algoritmo ClassificaCategoria
 14   FIM_SE
 15 FIM_SE
 16 ESCREVA "FIM"
-FIM_ALGORITMO
+17 FIM_ALGORITMO
 ```
 
 #### Teste de mesa (0.5 ponto)
@@ -190,10 +190,40 @@ D --FALSE--> Z([FIM])
 
 #### Teste de mesa (0.5 ponto)
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| it | numero | resto | Mensagem           |
+|----|--------|-------|--------------------|
+| 1  | 0      | 0     | 0                  |
+| 2  | 1      | 1     | (não exibido)      |
+| 3  | 2      | 2     | (não exibido)      |
+| 4  | 3      | 0     | 3                  |
+| 5  | 4      | 1     | (não exibido)      |
+| 6  | 5      | 2     | (não exibido)      |
+| 7  | 6      | 0     | 6                  |
+| 8  | 7      | 1     | (não exibido)      |
+| 9  | 8      | 2     | (não exibido)      |
+| 10 | 9      | 0     | 9                  |
+| 11 | 10     | 1     | (não exibido)      |
+| 12 | 11     | 2     | (não exibido)      |
+| 13 | 12     | 0     | 12                 |
+| 14 | 13     | 1     | (não exibido)      |
+| 15 | 14     | 2     | (não exibido)      |
+| 16 | 15     | 0     | 15                 |
+| 17 | 16     | 1     | (não exibido)      |
+| 18 | 17     | 2     | (não exibido)      |
+| 19 | 18     | 0     | 18                 |
+| 20 | 19     | 1     | (não exibido)      |
+| 21 | 20     | 2     | (não exibido)      |
+| 22 | 21     | 0     | 21                 |
+| 23 | 22     | 1     | (não exibido)      |
+| 24 | 23     | 2     | (não exibido)      |
+| 25 | 24     | 0     | 24                 |
+| 26 | 25     | 1     | (não exibido)      |
+| 27 | 26     | 2     | (não exibido)      |
+| 28 | 27     | 0     | 27                 |
+| 29 | 28     | 1     | (não exibido)      |
+| 30 | 29     | 2     | (não exibido)      |
+| 31 | 30     | 0     | 30                 |
+
 
 ### Exercício 03 (2.5 pontos)
 Dada uma sequência de números inteiros, calcular a sua soma. 
@@ -203,22 +233,47 @@ Por exemplo, para a sequência {12, 17, 4, -6, 8, 0}, o seu programa deve escrev
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+A([INICIO]) --> B{{Inicializar soma = 0}}
+B --> C{{Inicializar index i = 0}}
+C --> D{i < tamanho da sequência?}
+D --TRUE--> E{Adicionar número na soma}
+E --> F{Incrementar i}
+F --> G{Verificar se i < tamanho da sequência}
+G --> D
+D --FALSE--> H{Exibir soma}
+H --> Z([FIM])
+
 ```
 
 #### Pseudocódigo (1.0 ponto)
 
 ```
-Algoritmo ClassificaCategoria
-FIM_ALGORITMO
+1  Algoritmo CalcularSoma
+2  DECLARE sequencia: LISTA DE INTEIROS
+3  DECLARE soma, i: INTEIRO
+4  INICIO
+5    sequencia ← {12, 17, 4, -6, 8, 0}
+6    soma ← 0
+7    i ← 0
+8    ENQUANTO i < TAMANHO(sequencia) FAÇA
+9      soma ← soma + sequencia[i]
+10     i ← i + 1
+11   FIM_ENQUANTO
+12   ESCREVA soma
+13 FIM_ALGORITMO
+
 ```
 
 #### Teste de mesa (0.5 ponto)
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| it | sequencia             | soma |
+|----|-----------------------|------|
+| 1  | {12, 17, 4, -6, 8, 0} | 35   |
+| 2  | {1, 2, 3, 4, 5}       | 15   |
+| 3  | {-10, -5, 0, 5, 10}   | 0    |
+| 4  | {100, -50, 25, 75}    | 150  |
+| 5  | {7, 14, 21, 28, 35}   | 105  |
+
 
 ### Exercício 04 (2.5 pontos)
 Escreva um programa que leia a nota de diversos alunos, até que seja digitada uma nota negativa. 
