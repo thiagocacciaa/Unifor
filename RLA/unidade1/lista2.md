@@ -193,10 +193,10 @@ flowchart TD
 
 #### Teste de mesa (0.5 ponto)
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| it |	num1 |	num2 | operador |          resultado                 |      
+| 1  |   5	 |   2	 |   '+'	|              7                     |
+| 5  |	 8	 |   0	 |   '/'	|"Divisão por zero não é permitida!" |
+| 6	 |   5	 |   3	 |   '&'	|"Operador inválido!"                |
 
 ### Exercício 04 (2.5 pontos)
 Elaborar um algoritmo que, dada a idade, classifique nas categorias: infantil A (5 - 7 anos), infantil B (8 -10 anos), juvenil A (11 - 13 anos), juvenil B (14 -17 anos) e adulto (maiores que 18 anos).
@@ -205,19 +205,59 @@ Elaborar um algoritmo que, dada a idade, classifique nas categorias: infantil A 
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+    A([INICIO]) --> B{{"Digite a idade:"}}
+    B --> C[\idade\]
+    C --> D{idade >= 5 E idade <= 7}
+    D --TRUE--> E{{Categoria: Infantil A}}
+    D --FALSE--> F{idade >= 8 E idade <= 10}
+    F --TRUE--> G{{Categoria: Infantil B}}
+    F --FALSE--> H{idade >= 11 E idade <= 13}
+    H --TRUE--> I{{Categoria: Juvenil A}}
+    H --FALSE--> J{idade >= 14 E idade <= 17}
+    J --TRUE--> K{{Categoria: Juvenil B}}
+    J --FALSE--> L{idade >= 18}
+    L --TRUE--> M{{Categoria: Adulto}}
+    L --FALSE--> N{{Idade inválida}}
+    N --> O([FIM])
+    E --> O
+    G --> O
+    I --> O
+    K --> O
+    M --> O
+
 ```
 
 #### Pseudocódigo (1.0 ponto)
 
 ```
-Algoritmo ClassificaCategoria
-FIM_ALGORITMO
+1. ALGORITMO ClassificarIdade
+2. DECLARE idade: INTEIRO
+3. INÍCIO
+4.    ESCREVA "Digite a idade:"
+5.    LEIA idade
+6.    SE idade >= 5 E idade <= 7 ENTÃO
+7.        ESCREVA "Categoria: Infantil A"
+8.    SENÃO SE idade >= 8 E idade <= 10 ENTÃO
+9.        ESCREVA "Categoria: Infantil B"
+10.   SENÃO SE idade >= 11 E idade <= 13 ENTÃO
+11.       ESCREVA "Categoria: Juvenil A"
+12.   SENÃO SE idade >= 14 E idade <= 17 ENTÃO
+13.       ESCREVA "Categoria: Juvenil B"
+14.   SENÃO SE idade >= 18 ENTÃO
+15.       ESCREVA "Categoria: Adulto"
+16.   SENÃO
+17.       ESCREVA "Idade inválida"
+18.   FIM_SE
+19. FIM_ALGORITMO
+
 ```
 
 #### Teste de mesa (0.5 ponto)
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| it |	idade |	 categoria  |
+| 1  |	 6	  |  Infantil A |
+|2	 |   9	  |  Infantil B |
+|3	 |   12	  |   Juvenil A |
+|4	 |   16	  |   Juvenil B |
+|5	 |   25	  |    Adulto   |
+|6	 |   3	  |   Inválida  
