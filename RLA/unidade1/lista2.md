@@ -55,23 +55,45 @@ Calcule a média de quatro números inteiros dados.
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+    A([INICIO]) --> B{{Digite o primeiro número: }}
+    B --> C[\num1\]
+    C --> D{{Digite o segundo número: }}
+    D --> E[\num2\]
+    E --> F{{Digite o terceiro número: }}
+    F --> G[\num3\]
+    G --> H{{Digite o quarto número: }}
+    H --> I[\num4\]
+    I --> J[calcule a média = num1 + num2 + num3 + num4 / 4]
+    J --> K([FIM])
+
 ```
 
 #### Pseudocódigo (1.0 ponto)
 
 ```
-Algoritmo Media
-FIM_ALGORITMO
+1  ALGORITMO calcularMedia
+2  DECLARE num1, num2, num3, num4, media: INTEIRO
+3  INICIO
+4    ESCREVA "Digite o primeiro número: "
+5    LEIA num1
+6    ESCREVA "Digite o segundo número: "
+7    LEIA num2
+8    ESCREVA "Digite o terceiro número: "
+9    LEIA num3
+10   ESCREVA "Digite o quarto número: "
+11   LEIA num4
+12   media ← (num1 + num2 + num3 + num4) / 4
+13   ESCREVA "A média dos quatro números é: ", media
+14 FIM_ALGORITMO
+
 ```
 
 #### Teste de mesa (0.5 ponto)
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
-
+| it |	num1 | num2 |	num3 |	num4 |	media |
+| 1  |	 10  |  20  |	 30  |   40  |   25   |
+| 2  |   5   |  5	  |  5	 |   5	 |   5    |
+| 3  |  -10  | -20	| -30	 |  -40	 |  -25   |
 ### Exercício 02 (2.5 pontos)
 Leia uma temperatura dada em Celsius (C) e imprima o equivalente em Fahrenheit (F). (Fórmula de conversão: F = (9/5) * C + 32)
 
@@ -79,22 +101,32 @@ Leia uma temperatura dada em Celsius (C) e imprima o equivalente em Fahrenheit (
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+    A([INICIO]) --> B{{Digite a temperatura em Celsius C :}}
+    B --> C[\C\]
+    C --> D[F = 9/5 * C + 32]
+    D --> E{{Imprima F}}
+
 ```
 
 #### Pseudocódigo (1.0 ponto)
 
 ```
-Algoritmo ConverteCelsiusFarenheit
-FIM_ALGORITMO
+1  ALGORITMO ConversorCelsiusToFahrenheit
+2      DECLARE C, F: REAL
+3      INICIO
+4          ESCREVA "Digite a temperatura em Celsius (C): "
+5          LEIA C
+6          F <- (9/5) * C + 32
+7          ESCREVA "A temperatura em Fahrenheit é: ", F
+8      FIM_ALGORITMO
+
 ```
 
 #### Teste de mesa (0.5 ponto)
-
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| it |	C	 | F   |
+| 1	 |  0	 | 32  |
+| 2	 | 100 | 212 |
+| 3	 | -40 | -40 |
 
 ### Exercício 03 (2.5 pontos)
 Receba dois números reais e um operador e efetue a operação correspondente com os valores recebidos (operandos). 
@@ -104,14 +136,59 @@ O algoritmo deve retornar o resultado da operação selecionada simulando todas 
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+    A([INICIO]) --> B{{Digite o primeiro número:}}
+    B --> C[\num1\]
+    C --> D{{Digite o segundo número:}}
+    D --> E[\num2\]
+    E --> F{{Digite o operador +, -, *, /:}}
+    F --> G[\operador\]
+    G --> H{operador == '+'?}
+    H --TRUE--> I[num1 + num2]
+    H --FALSE--> J{operador == '-'?}
+    J --TRUE--> K[num1 - num2]
+    J --FALSE--> L{operador == '*'?}
+    L --TRUE--> M[num1 * num2]
+    L --FALSE--> N{operador == '/'?}
+    N --TRUE--> O[num1 / num2]
+    N --FALSE--> P{{Operador inválido!}}
+    P --> Q([FIM])
+    O --> Q
+    M --> Q
+    K --> Q
+    I --> Q
+
 ```
 
 #### Pseudocódigo (1.0 ponto)
 
 ```
-Algoritmo Calculadora
-FIM_ALGORITMO
+1. ALGORITMO Calculadora
+2. DECLARE num1, num2, resultado: REAL
+3. INÍCIO
+4.    ESCREVA "Digite o primeiro número:"
+5.    LEIA num1
+6.    ESCREVA "Digite o segundo número:"
+7.    LEIA num2
+8.    ESCREVA "Digite o operador (+, -, *, /):"
+9.    LEIA operador
+10.    SE operador == '+' ENTÃO
+11.        resultado ← num1 + num2
+12.    SENÃO SE operador == '-' ENTÃO
+13.        resultado ← num1 - num2
+14.    SENÃO SE operador == '*' ENTÃO
+15.        resultado ← num1 * num2
+16.    SENÃO SE operador == '/' ENTÃO
+17.        SE num2 == 0 ENTÃO
+18.            ESCREVA "Divisão por zero não é permitida!"
+19.        SENÃO
+20.            resultado ← num1 / num2
+21.        FIM_SE
+22.    SENÃO
+23.        ESCREVA "Operador inválido!"
+24.    FIM_SE
+25.    ESCREVA "Resultado:", resultado
+26. FIM_ALGORITMO
+
 ```
 
 #### Teste de mesa (0.5 ponto)
