@@ -83,7 +83,7 @@ ALGORITMO TrocarValores
 #### Teste de mesa (0.25 ponto)
 
 | a  | b  | aux | a  | b  | saída 1 | saída 2 | 
-| 5  | 6  | 0   | 6  | 5  | a = 6   | b = 5   | 
+| -- | -- | --  | -- | -- |  --     |   --    | 
 | 0  | 1  | 0   | 1  | 0  | a = 1   | b = 0   |
 
 ### Questão 2 - Contagem (1 ponto)
@@ -143,9 +143,9 @@ Teste de mesa referente ao algoritmo usando o loop ENQUANTO.
 
 | it | n  | i  | cont | i<=n  | nota, i | nota | nota_valida | cont+1 | i+1 | saída        | 
 | -- | -- | -- | --   | --    | --      | --   | --          | --     | --  | --           |
-| 1  | 3  | 1  |  0   | True  | nota 1  | 60   | True        | 1      | 2   |              |
-| 2  | 3  | 2  |  1   | True  | nota 2  | 40   | False       | 1      | 3   |              |
-| 3  | 3  | 3  |  1   | True  | nota 3  | 90   | True        | 2      | 4   |              |
+| 1  | 3  | 1  |  0   | True  | nota 1  | 60   | True        | 1      | 2   | Aprovados: 1 |
+| 2  | 3  | 2  |  1   | True  | nota 2  | 40   | False       | 1      | 3   | Aprovados: 0 |
+| 3  | 3  | 3  |  1   | True  | nota 3  | 90   | True        | 2      | 4   | Aprovados: 1 |
 | 4  | 3  | 4  |  2   | False | nota 4  | 80   | True        | 3      | 5   | Aprovados: 2 |
 
 
@@ -208,10 +208,10 @@ ALGORITMO CalcularSoma
 | -- | -- | --     | --   | -- | --     | --  | --           | --                      |
 |    | -3 | False  |      |    |        |     |              | O valor deve ser ...    |
 | 1  | 0  | True   | 0    | 1  | False  |     |              | A soma dos números é 0  |
-| 1  | 3  | True   | 0    | 1  | True   | 5   | 0 + 5 = 5    |                         |
-| 2  | 3  | True   | 5    | 2  | True   | 10  | 5 + 10 = 15  |                         |
-| 3  | 3  | True   | 15   | 3  | True   | 20  | 15 + 20 = 35 |                         |
-| 4  | 3  | True   | 35   | 4  | False  |     |              | A soma dos números é 35 |
+| 1  | 3  | True   | 0    | 1  | True   | 5   | 0 + 5 = 5    | A soma dos números é 5  |
+| 2  | 3  | True   | 5    | 2  | True   | 10  | 5 + 10 = 15  | A soma dos números é 15 |
+| 3  | 3  | True   | 15   | 3  | True   | 20  | 15 + 20 = 35 | A soma dos números é 35 |
+| 4  | 3  | True   | 35   | 4  | False  | 0   | 35 + 0 = 35  | A soma dos números é 35 |
 
 
 ### Questão 4 - Cálculo de uma série (1 ponto)
@@ -261,9 +261,9 @@ ALGORITMO CalcularSerieS
 | it | n  | S  | i | numerador | denominador | termo | S += termo     | saída                  |
 | -- | -- | -- |-- | --        | --          | --    | --             | --                     |
 |    | 0  | 0  |   |           |             |       |                |                        |
-| 1  | 4  | 0  | 0 | 2*0+1 = 1 | 2*0+2 = 2   | 1/2   | 0+1/2 = 1/2    |                        |
-| 2  | 4  | 0  | 1 | 2*1+1 = 1 | 2*1+2 = 2   | 3/4   | 1/2+3/4 = 1.25 |                        |
-| 3  | 4  | 0  | 2 | 2*2+1 = 1 | 2*2+2 = 2   | 5/6   | 0+1/2 = 2.08   |                        |
+| 1  | 4  | 0  | 0 | 2*0+1 = 1 | 2*0+2 = 2   | 1/2   | 0+1/2 = 1/2    | Soma da série S é 1/2  |
+| 2  | 4  | 0  | 1 | 2*1+1 = 1 | 2*1+2 = 2   | 3/4   | 1/2+3/4 = 1.25 | Soma da série S é 1.25 |
+| 3  | 4  | 0  | 2 | 2*2+1 = 1 | 2*2+2 = 2   | 5/6   | 0+1/2 = 2.08   | Soma da série S é 2.08 |
 | 4  | 4  | 0  | 3 | 2*3+1 = 1 | 2*3+2 = 2   | 7/8   | 0+1/2 = 2.96   | Soma da série S é 2.96 |
 
 ### Questão 5 - Cálculo fatorial (2 pontos)
@@ -312,8 +312,8 @@ ALGORITMO CalcularFatorial
 
 | n  | fator | i  | fator = fator * i | saída               |
 | -- | --    | -- | --                | --                  |
-| 3  | 1     | 1  | 1*1 = 1           |                     |
-| 3  | 1     | 2  | 1*2 = 2           |                     |
+| 3  | 1     | 1  | 1*1 = 1           | O fatorial de 1 é 1 |
+| 3  | 1     | 2  | 1*2 = 2           | O fatorial de 2 é 2 |
 | 3  | 2     | 3  | 2*3 = 6           | O fatorial de 3 é 6 |
 ### Questão 6 - Geração da sequência de Fibonacci (2 pontos)
 
