@@ -260,4 +260,4 @@ flowchart TD
 |3	 |   12	  |   Juvenil A |
 |4	 |   16	  |   Juvenil B |
 |5	 |   25	  |    Adulto   |
-|6	 |   3	  |   Inválida  
+|6	 |   3	  |   Inválida  |
