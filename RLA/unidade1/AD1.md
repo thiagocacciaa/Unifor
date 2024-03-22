@@ -63,24 +63,20 @@ I --> J{{"b =", b}}
 #### Pseudocódigo (0.5 ponto)
 
 ```
-Algoritmo TrocaValores
-1  ALGORITMO determinar_par_ou_impar()
-2  DECLARE numero, resto: INTEIRO
-3  INICIO
-4    ESCREVA "Digite um número: "
-5    LEIA numero
-6    SE numero < 0 ENTÃO
-7      ESCREVA "O número não é positivo!"
-8    SENÃO
-9      resto ← numero % 2
-10     SE resto == 0 ENTÃO
-11       ESCREVA "O número é par!"
-12     SENÃO
-13       ESCREVA "O número é ímpar!"
-14     FIM_SE
-15   FIM_SE
-16   ESCREVA "FIM"
-17 FIM_ALGORITMO
+ALGORITMO TrocarValores
+1. DECLARE a, b, aux: INTEIRO
+2. INICIO
+3.   ESCREVA "Digite o valor da a: "
+4.   LEIA a
+5.   ESCREVA "Digite o valor da b: "
+6.   LEIA b
+7.   aux ← a
+8.   a ← b
+9.   b ← aux
+10.  ESCREVA "a =", a
+11.  ESCREVA "b =", b
+12. FIM_ALGORITMO
+
 
 ```
 
@@ -182,7 +178,7 @@ K --LOOP--> G
 #### Pseudocódigo (0.5 ponto)
 
 ```
-Algoritmo ContaAprovacoes
+
 ALGORITMO CalcularSoma
 1. DECLARE n, soma, i, num: INTEIRO
 2. INICIO
@@ -344,21 +340,22 @@ I --LOOP--> E
 #### Pseudocódigo (1.0 ponto)
 
 ```
-ALGORITMO CalcularFatorial
-1. DECLARE n, fator, i: INTEIRO
+ALGORITMO SerieFibonacci
+1. DECLARE n, a, b, termo_atual, i: INTEIRO
 2. INICIO
-3.   ESCREVA "Digite um número inteiro não-negativo:"
+3.   ESCREVA "Número de termos da série Fibonacci: "
 4.   LEIA n
-5.   SE n >= 0 ENTÃO
-6.     fator ← 1
-7.     PARA i DE 1 ATÉ n PASSO 1 FAÇA
-8.       fator ← fator * i
-9.     FIM_PARA
-10.    ESCREVA "O fatorial de ", n, " é: ", fator
-11.  SENÃO
-12.    ESCREVA "O valor deve ser maior ou igual a zero!"
-13.  FIM_SE
+5.   a ← 0
+6.   b ← 1
+7.   PARA i DE 1 ATÉ n PASSO 1 FAÇA
+8.     ESCREVA a
+9.     termo_atual ← a + b
+10.    a ← b
+11.    b ← termo_atual
+12. FIM_PARA
+13. ESCREVA "FIM"
 14. FIM_ALGORITMO
+
 
 ```
 #### Teste de mesa (0.5 ponto)
