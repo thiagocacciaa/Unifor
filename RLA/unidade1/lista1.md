@@ -26,22 +26,22 @@ I --> Z
 
 #### Pseudocódigo (0,5 ponto)
 ```
-1  ALGORTIMO verifica_par_impar
-2  DECLARE numero, resto: INTEIRO
-3  ESCREVA "Digite um número: "
-4  INICIO
-4  LEIA numero
+1  ALGORTIMO verifica_par_impar   //titulo do algoritimo
+2  DECLARE numero, resto: INTEIRO   //declara os seguintes elementos como variavel INTEIRO
+3  ESCREVA "Digite um número: "    //escreve uma frase pedindo entrada do valor de numero
+4  INICIO   //inicio do algoritimo
+4  LEIA numero    //faz a leitura da entrada
 5  SE numero >= 0 ENTAO                  // verifica se o inteiro é positivo
 6    resto = numero % 2                 // calcula o resto da divisão por 2
 7    SE resto == 0 ENTAO                // verifica se o resto é igual a zero
-8      ESCREVA "O número é par!"
-9    SENAO
-10     ESCREVA "O número é impar!"
-11   FIM_SE
+8      ESCREVA "O número é par!"     // escreve a seguinte mensagem
+9    SENAO     //incio SENAO
+10     ESCREVA "O número é impar!"     // escreve a seguinte mensagem
+11   FIM_SE      //fim da ferramenta SE
 11  SENAO                                // caso inteiro for negativo (condição linha 5)
-12    ESCREVA "O número deve ser postivo!"
-13  FIM_SE
-13 FIM
+12    ESCREVA "O número deve ser postivo!"     //escreve a frase
+13  FIM_SE      //fim da ferramenta SE
+13 FIM     //fim do algoritimo
 ```
 
 
@@ -76,17 +76,17 @@ flowchart TD
 
 ```
 ALGORITMO CalcularNovoSalario
-1. DECLARE salario, novo_salario: REAL 
-2. INICIO
-3.   ESCREVA "Digite o salário atual: "
-4.   LEIA salario
-5.   SE salario <= 500 ENTÃO
-6.     novo_salario <- salario * 1.20
-7.   SENÃO
-8.     novo_salario <- salario * 1.10
-9.   FIM_SE
-10.  ESCREVA "O novo salário é: ", novo_salario
-11. FIM_ALGORITMO
+1. DECLARE salario, novo_salario: REAL  //titulo do algoritimo
+2. INICIO    //inicio do algoritimo
+3.   ESCREVA "Digite o salário atual: "    //entrada do valor de salario
+4.   LEIA salario    //leitura do valor de salario
+5.   SE salario <= 500 ENTÃO    //inicio ferramenta SE 
+6.     novo_salario <- salario * 1.20   //atribui uma equacao ao elemento "novo_salario"
+7.   SENÃO   //incio da ferraenta SENAO
+8.     novo_salario <- salario * 1.10   //atribui uma equacao ao elemento "novo_salario"
+9.   FIM_SE    //fim da ferramenta SE
+10.  ESCREVA "O novo salário é: ", novo_salario    //exibe valor do elemento
+11. FIM_ALGORITMO  //fim do algoritimo
 
 ```
 
@@ -120,19 +120,19 @@ flowchart TD
 #### Pseudocódigo (1 ponto)
 
 ```
-ALGORITMO CalcularMediaEStatus
-1. INÍCIO
-2.     ESCREVA "Digite a primeira nota: "
-3.     LEIA nota1
-4.     ESCREVA "Digite a segunda nota: "
-5.     LEIA nota2
-6.     media <- (nota1 + nota2) / 2
-7.     SE media >= 6 ENTÃO
-8.         ESCREVA "Aluno aprovado!"
-9.     SENÃO
-10.        ESCREVA "Aluno reprovado!"
-11.    FIM_SE
-12. FIM_ALGORITMO
+ALGORITMO CalcularMediaEStatus    //titulo do algoritimo
+1. INÍCIO     //inicio do algoritimo
+2.     ESCREVA "Digite a primeira nota: "    //entrada de nota1
+3.     LEIA nota1      //leitura de nota1
+4.     ESCREVA "Digite a segunda nota: "   //entrada de nota2
+5.     LEIA nota2       //leitura de nota2
+6.     media <- (nota1 + nota2) / 2     //atribui uma equacao coo valor de "media"
+7.     SE media >= 6 ENTÃO    //incio ferramenta SE
+8.         ESCREVA "Aluno aprovado!"    //escreve frase
+9.     SENÃO    //inicio SENAO
+10.        ESCREVA "Aluno reprovado!"   //escreve frase
+11.    FIM_SE     //fim ferramenta SE
+12. FIM_ALGORITMO     //fi do algoritimo
 
 ```
 
@@ -166,21 +166,21 @@ flowchart TD
 #### Pseudocódigo (1.0 ponto)
 
 ```
-1  ALGORITMO VerificarCNH
-2      DECLARE idade, anos_faltantes: INTEIRO
-3      
-4      ESCREVA "Digite a idade do candidato: "
-5      LEIA idade
+1  ALGORITMO VerificarCNH    //titulo do algoritimo
+2      DECLARE idade, anos_faltantes: INTEIRO    //declara elementos como INTEIRO
+3      INICIO    //incio algoritimo
+4      ESCREVA "Digite a idade do candidato: "   //entrada do valor de "idade"
+5      LEIA idade     //leitura do valor de "idade"
 6      
-7      SE idade >= 18 ENTÃO
-8          ESCREVA "Candidato pode tirar a CNH"
-9      SENÃO
-10         anos_faltantes <- 18 - idade
-11         ESCREVA "Faltam ", anos_faltantes, " anos para tirar a CNH"
-12     FIM_SE
+7      SE idade >= 18 ENTÃO   //inicio ferramenta SE
+8          ESCREVA "Candidato pode tirar a CNH"    //escreve frase
+9      SENÃO    //inicio SENAO
+10         anos_faltantes <- 18 - idade   //atribui equacao como valor do elemento
+11         ESCREVA "Faltam ", anos_faltantes, " anos para tirar a CNH"     //exibe valor do elemento 
+12     FIM_SE   //fim ferraenta SE
 13     
-14     ESCREVA "FIM"
-15 FIM_ALGORITMO
+14     ESCREVA "FIM"    //escreve frase
+15 FIM_ALGORITMO   //fim do algoritimo
 
 ```
 
