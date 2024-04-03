@@ -71,20 +71,20 @@ flowchart TD
 #### Pseudocódigo (1.0 ponto)
 
 ```
-1  ALGORITMO calcularMedia
-2  DECLARE num1, num2, num3, num4, media: INTEIRO
+1  ALGORITMO calcularMedia    //titulo do algoritimo
+2  DECLARE num1, num2, num3, num4, media: INTEIRO     //declara elemetos como INTEIRO
 3  INICIO
-4    ESCREVA "Digite o primeiro número: "
-5    LEIA num1
-6    ESCREVA "Digite o segundo número: "
-7    LEIA num2
-8    ESCREVA "Digite o terceiro número: "
-9    LEIA num3
-10   ESCREVA "Digite o quarto número: "
-11   LEIA num4
+4    ESCREVA "Digite o primeiro número: "   //solicita entrada de um elemento
+5    LEIA num1     //faz a leitura da entrada de um elemento
+6    ESCREVA "Digite o segundo número: "     //solicita entrada de um elemento
+7    LEIA num2    //faz a leitura da entrada de um elemento
+8    ESCREVA "Digite o terceiro número: "     //solicita entrada de um elemento
+9    LEIA num3     //faz a leitura da entrada de um elemento
+10   ESCREVA "Digite o quarto número: "      //solicita entrada de um elemento
+11   LEIA num4     //faz a leitura da entrada de um elemento
 12   media ← (num1 + num2 + num3 + num4) / 4
-13   ESCREVA "A média dos quatro números é: ", media
-14 FIM_ALGORITMO
+13   ESCREVA "A média dos quatro números é: ", media    //exibe valor de "media"
+14 FIM_ALGORITMO   //fim do algoritimo
 
 ```
 
@@ -112,14 +112,14 @@ flowchart TD
 #### Pseudocódigo (1.0 ponto)
 
 ```
-1  ALGORITMO ConversorCelsiusToFahrenheit
-2      DECLARE C, F: REAL
-3      INICIO
-4          ESCREVA "Digite a temperatura em Celsius (C): "
-5          LEIA C
-6          F <- (9/5) * C + 32
-7          ESCREVA "A temperatura em Fahrenheit é: ", F
-8      FIM_ALGORITMO
+1  ALGORITMO ConversorCelsiusToFahrenheit  //titulo do algoritimo
+2      DECLARE C, F: REAL    //declara elemetos como REAL
+3      INICIO    //incio do algoritimo
+4          ESCREVA "Digite a temperatura em Celsius (C): "   //solicita entrada de C
+5          LEIA C    //faz leitura do valor de C 
+6          F <- (9/5) * C + 32   //atribui uma equacao como valor de F 
+7          ESCREVA "A temperatura em Fahrenheit é: ", F    //exibe valor de F 
+8      FIM_ALGORITMO    //fim do algoritimo
 
 ```
 
@@ -164,32 +164,32 @@ flowchart TD
 #### Pseudocódigo (1.0 ponto)
 
 ```
-1. ALGORITMO Calculadora
-2. DECLARE num1, num2, resultado: REAL
-3. INÍCIO
-4.    ESCREVA "Digite o primeiro número:"
-5.    LEIA num1
-6.    ESCREVA "Digite o segundo número:"
-7.    LEIA num2
-8.    ESCREVA "Digite o operador (+, -, *, /):"
-9.    LEIA operador
-10.    SE operador == '+' ENTÃO
+1. ALGORITMO Calculadora     //titulo do algoritimo
+2. DECLARE num1, num2, resultado: REAL    //declara elemetos como REAL
+3. INÍCIO   //incio do algoritimo
+4.    ESCREVA "Digite o primeiro número:"   //solicita entrada de um elemento
+5.    LEIA num1    //faz a leitura da entrada de um elemento
+6.    ESCREVA "Digite o segundo número:"    //solicita entrada de um elemento
+7.    LEIA num2    //faz a leitura da entrada de um elemento
+8.    ESCREVA "Digite o operador (+, -, *, /):"     //solicita entrada de um elemento  
+9.    LEIA operador     //faz a leitura da entrada de um elemento
+10.    SE operador == '+' ENTÃO    //inicio SE
 11.        resultado ← num1 + num2
-12.    SENÃO SE operador == '-' ENTÃO
-13.        resultado ← num1 - num2
-14.    SENÃO SE operador == '*' ENTÃO
-15.        resultado ← num1 * num2
-16.    SENÃO SE operador == '/' ENTÃO
+12.    SENÃO SE operador == '-' ENTÃO   //inicio SENAO
+13.        resultado ← num1 - num2     //atribui valor
+14.    SENÃO SE operador == '*' ENTÃO   //inicio SENAO
+15.        resultado ← num1 * num2     //atribui valor
+16.    SENÃO SE operador == '/' ENTÃO    //inicio SENAO
 17.        SE num2 == 0 ENTÃO
 18.            ESCREVA "Divisão por zero não é permitida!"
-19.        SENÃO
+19.        SENÃO   //inicio SENAO
 20.            resultado ← num1 / num2
-21.        FIM_SE
-22.    SENÃO
-23.        ESCREVA "Operador inválido!"
-24.    FIM_SE
-25.    ESCREVA "Resultado:", resultado
-26. FIM_ALGORITMO
+21.        FIM_SE    //fim SE
+22.    SENÃO   //incio SENAO
+23.        ESCREVA "Operador inválido!"    //escreve o que foi pedido
+24.    FIM_SE    //fim SE
+25.    ESCREVA "Resultado:", resultado    //exibe resulatdo
+26. FIM_ALGORITMO   //fim do algoritimo
 
 ```
 
@@ -234,7 +234,7 @@ flowchart TD
 
 ```
 1. ALGORITMO ClassificarIdade
-2. DECLARE idade: INTEIRO
+2. DECLARE idade: INTEIRO     //declara elemetos como INTEIRO
 3. INÍCIO
 4.    ESCREVA "Digite a idade:"
 5.    LEIA idade
