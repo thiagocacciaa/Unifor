@@ -91,6 +91,7 @@ flowchart TD
 #### Teste de mesa (0.5 ponto)
 
 | it |	num1 | num2 |	num3 |	num4 |	media |
+| -- | -- | -- | -- | -- | -- |
 | 1  |	 10  |  20  |	 30  |   40  |   25   |
 | 2  |   5   |  5	  |  5	 |   5	 |   5    |
 | 3  |  -10  | -20	| -30	 |  -40	 |  -25   |
@@ -124,6 +125,7 @@ flowchart TD
 
 #### Teste de mesa (0.5 ponto)
 | it |	C	 | F   |
+| -- | -- | -- |
 | 1	 |  0	 | 32  |
 | 2	 | 100 | 212 |
 | 3	 | -40 | -40 |
@@ -194,6 +196,7 @@ flowchart TD
 #### Teste de mesa (0.5 ponto)
 
 | it |	num1 |	num2 | operador |          resultado                 |      
+| -- | -- | -- | -- | -- |
 | 1  |   5	 |   2	 |   '+'	|              7                     |
 | 5  |	 8	 |   0	 |   '/'	|"Divisão por zero não é permitida!" |
 | 6	 |   5	 |   3	 |   '&'	|"Operador inválido!"                |
@@ -255,6 +258,7 @@ flowchart TD
 #### Teste de mesa (0.5 ponto)
 
 | it |	idade |	 categoria  |
+| -- | -- | -- |
 | 1  |	 6	  |  Infantil A |
 |2	 |   9	  |  Infantil B |
 |3	 |   12	  |   Juvenil A |
