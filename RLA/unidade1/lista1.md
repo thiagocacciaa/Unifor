@@ -44,6 +44,7 @@ I --> Z
 13 FIM
 ```
 
+
 #### Teste de mesa (0,25 ponto)
 | numero | numero >= 0 | resto | resto == 0 | Saída |
 | -- | -- | -- | -- | -- | 
@@ -75,7 +76,7 @@ flowchart TD
 
 ```
 ALGORITMO CalcularNovoSalario
-1. DECLARE salario, novo_salario: REAL
+1. DECLARE salario, novo_salario: REAL 
 2. INICIO
 3.   ESCREVA "Digite o salário atual: "
 4.   LEIA salario
