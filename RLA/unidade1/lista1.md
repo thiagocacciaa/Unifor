@@ -92,6 +92,7 @@ ALGORITMO CalcularNovoSalario
 #### Teste de mesa (1.0 ponto)
 
 | it |	salario |	salario <= 500 |	novo_salario |
+| -- | -- | -- | -- |
 | 1	 |    400	  |  VERDADEIRO	   |      480      |
 | 2	 |    800	  |     FALSO	     |      880      |
 | 3  |    500   |  VERDADEIRO    |      600      |
@@ -137,6 +138,7 @@ ALGORITMO CalcularMediaEStatus
 #### Teste de mesa (1 ponto)
 
 | it |	nota1 |	nota2 |	media | situacao  |
+| -- | -- | -- | -- | -- |
 | 1	 |   7.5	|  8.0	| 7.75	| Aprovado  |
 | 2	 |   6.0	|  5.5	| 5.75	| Reprovado |
 | 3	 |   4.0	|  6.0	| 5.0	  | Reprovado |
@@ -184,6 +186,7 @@ flowchart TD
 #### Teste de mesa (1.0 ponto)
 
 | it |	idade | anos_faltantes |	Mensagem                       |
+| -- | -- | -- | -- |
 | 1	 |   20	  |      -         |	Candidato pode tirar a CNH     |
 | 2	 |   16	  |      2	       |  Faltam 2 anos para tirar a CNH |
 | 3	 |   18	  |      -         |	Candidato pode tirar a CNH     |
