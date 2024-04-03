@@ -63,19 +63,19 @@ I --> J{{"b =", b}}
 #### Pseudocódigo (0.5 ponto)
 
 ```
-ALGORITMO TrocarValores
-1. DECLARE a, b, aux: INTEIRO
-2. INICIO
-3.   ESCREVA "Digite o valor da a: "
-4.   LEIA a
-5.   ESCREVA "Digite o valor da b: "
-6.   LEIA b
-7.   aux ← a
-8.   a ← b
-9.   b ← aux
-10.  ESCREVA "a =", a
-11.  ESCREVA "b =", b
-12. FIM_ALGORITMO
+ALGORITMO TrocarValores   //nome do algoritimo
+1. DECLARE a, b, aux: INTEIRO     //declarei a, b e aux como elementos INTEIRO
+2. INICIO   // inicio do algoritimo
+3.   ESCREVA "Digite o valor da a: "   //solicitei para o usuario digitar o valor de a
+4.   LEIA a     //solicitei para o programa ler o valor de a
+5.   ESCREVA "Digite o valor da b: "   //solicitei para o usuario digitar o valor de b
+6.   LEIA b     //solicitei para o programa ler o valor de b
+7.   aux ← a    //atribui o valor de a para aux
+8.   a ← b      //atribui o valor de b para a
+9.   b ← aux    //atribui o valor de aux para b
+10.  ESCREVA "a =", a   //escrevi o novo valor de a
+11.  ESCREVA "b =", b   //escrevi o novo valor de b
+12. FIM_ALGORITMO   //finalizei o algoritimo 
 
 
 ```
@@ -117,23 +117,23 @@ K --LOOP--> F
 
 ```
 Algoritmo ContaAprovacoes
-1  ALGORITMO ContarAprovados
-2  DECLARE n, nota, cont, i: INTEIRO
-3  INICIO
-4    ESCREVA "Digite o número de alunos: "
-5    LEIA n
-6    cont ← 0
-7    i ← 1
-8    ENQUANTO i <= n FAÇA
-9      ESCREVA "Digite a nota do aluno ", i, ": "
-10     LEIA nota
-11     SE nota >= 50 E nota <= 100 ENTÃO
-12       cont ← cont + 1
-13     FIM_SE
-14     i ← i + 1
-15   FIM_ENQUANTO
-16   ESCREVA "Número de alunos aprovados: ", cont
-17 FIM_ALGORITMO
+1  ALGORITMO ContarAprovados    //titulo do algoritimo
+2  DECLARE n, nota, cont, i: INTEIRO    //declarei os valores escritos como INTEIRO
+3  INICIO    //dei inicio ao algoritimo
+4    ESCREVA "Digite o número de alunos: "  //solicitei o n de alunos
+5    LEIA n  //solicitei a leitura do valor n
+6    cont ← 0  //declari cont como 0
+7    i ← 1   //declarei i como 1
+8    ENQUANTO i <= n FAÇA  //dei inicio a ferramenta ENQUANTO
+9      ESCREVA "Digite a nota do aluno ", i, ": "  //solicitei que o usuario digitar a nota
+10     LEIA nota   //solicitei a leitura da variavel
+11     SE nota >= 50 E nota <= 100 ENTÃO  //inicio da ferramenta SE
+12       cont ← cont + 1 //atribui um novo valor a cont
+13     FIM_SE  //finalizei a ferramenta SE
+14     i ← i + 1  // atribui um novo valor a i
+15   FIM_ENQUANTO  /finalizei a ferramenta ENQUANTO
+16   ESCREVA "Número de alunos aprovados: ", cont  /solicitei que o algoritimo escreva o numero de aprovados (cont)
+17 FIM_ALGORITMO    //fim do algoritimo
 
 
 ```
@@ -180,24 +180,24 @@ K --LOOP--> G
 ```
 
 ALGORITMO CalcularSoma
-1. DECLARE n, soma, i, num: INTEIRO
-2. INICIO
-3.   ESCREVA "Digite a quantidade de números (n >= 0): "
-4.   LEIA n
-5.   SE n < 0 ENTÃO
-6.     ESCREVA "O valor deve ser maior ou igual a zero!"
-7.   SENÃO
-8.     soma ← 0
-9.     i ← 1
-10.    ENQUANTO i <= n FAÇA
-11.      ESCREVA "Digite um número: "
-12.      LEIA num
-13.      soma ← soma + num
-14.      i ← i + 1
-15.    FIM_ENQUANTO
-16.    ESCREVA "A soma dos números é ", soma
-17.   FIM_SE
-18. FIM_ALGORITMO
+1. DECLARE n, soma, i, num: INTEIRO   //declarei as variaveis como INTEIRO
+2. INICIO   //inicio do algoritimo
+3.   ESCREVA "Digite a quantidade de números (n >= 0): "   //solicitei que o usuario digite o valor de n
+4.   LEIA n   //solicitei a leitura da entrada do usuario (valor de n)
+5.   SE n < 0 ENTÃO   //inicio da ferramenta SE
+6.     ESCREVA "O valor deve ser maior ou igual a zero!"   //solicitei que escreva a seguinte frase
+7.   SENÃO    //inicio da ferramenta SENAO
+8.     soma ← 0   //atribui um valor a soma
+9.     i ← 1     //atribui um valor a i
+10.    ENQUANTO i <= n FAÇA    //inicio da ferramenta ENQUANTO
+11.      ESCREVA "Digite um número: "   //solicitei a entrada de num
+12.      LEIA num    //solicitei a leitura de num
+13.      soma ← soma + num   //atribui um novo valor a soma
+14.      i ← i + 1    //atribui um novo valor a i
+15.    FIM_ENQUANTO     //fim da ferraenta ENQUANTO
+16.    ESCREVA "A soma dos números é ", soma    //solicitei que escreva o valor da soma
+17.   FIM_SE   //fim da ferramenta SE
+18. FIM_ALGORITMO  //fim do algoritimo 
 
 
 ```
@@ -240,20 +240,20 @@ I --LOOP--> E
 #### Pseudocódigo (0.5 ponto)
 
 ```
-ALGORITMO CalcularSerieS
-1. DECLARE n, S, numerador, denominador, termo, i: INTEIRO
-2. INICIO
-3.   ESCREVA "Digite o número de termos da série S: "
-4.   LEIA n
-5.   S ← 0
-6.   PARA i DE 0 ATÉ n PASSO 1 FAÇA
-7.     numerador ← 2 * i + 1
-8.     denominador ← 2 * i + 2
-9.     termo ← numerador / denominador
-10.    S ← S + termo
-11.  FIM_PARA
-12.  ESCREVA "Soma da série S é ", S
-13. FIM_ALGORITMO
+ALGORITMO CalcularSerieS   //titulo do algoritimo
+1. DECLARE n, S, numerador, denominador, termo, i: INTEIRO   //declarei os seguintes elementos como INTEIRO
+2. INICIO    //inicio do algoritio
+3.   ESCREVA "Digite o número de termos da série S: "   //solicitei a entrada do valor de s
+4.   LEIA n   //solicitei a leitura da entrada do usuario (valor de n)
+5.   S ← 0   //atribui um valor a S 
+6.   PARA i DE 0 ATÉ n PASSO 1 FAÇA    //inicio da ferramenta PARA
+7.     numerador ← 2 * i + 1   //atribui a seguinte equacao como valor do numerador
+8.     denominador ← 2 * i + 2    //atribui a seguinte equacao como valor do denominador
+9.     termo ← numerador / denominador   //atribui a seguinte equacao como valor do termo
+10.    S ← S + termo    //atribui a seguinte soma como novo valor de S
+11.  FIM_PARA   /fim da ferramenta PARA
+12.  ESCREVA "Soma da série S é ", S   //solicitei que escreva o valor de S
+13. FIM_ALGORITMO    //fim do algoritimo
 ```
 
 #### Teste de mesa (0.25 ponto)
@@ -290,21 +290,21 @@ H --> I
 #### Pseudocódigo (1.0 ponto)
 
 ```
-ALGORITMO CalcularFatorial
-1. DECLARE n, fator, i: INTEIRO
-2. INICIO
-3.   ESCREVA "Digite um número inteiro não-negativo:"
-4.   LEIA n
-5.   SE n >= 0 ENTÃO
-6.     fator ← 1
-7.     PARA i DE 1 ATÉ n PASSO 1 FAÇA
-8.       fator ← fator * i
-9.     FIM_PARA
-10.    ESCREVA "O fatorial de ", n, " é: ", fator
-11.  SENÃO
-12.    ESCREVA "O valor deve ser maior ou igual a zero!"
-13.  FIM_SE
-14. FIM_ALGORITMO
+ALGORITMO CalcularFatorial     //titulo do algoritimo
+1. DECLARE n, fator, i: INTEIRO    //declarei ps seguintes elementos como INTEIRO
+2. INICIO   //incio do algoritimo
+3.   ESCREVA "Digite um número inteiro não-negativo:"   //solicitei a entrada do valor de n
+4.   LEIA n   //solicitei e leitura do valor de n
+5.   SE n >= 0 ENTÃO   //inicio da ferramenta SE
+6.     fator ← 1   //atribui um valor a fator
+7.     PARA i DE 1 ATÉ n PASSO 1 FAÇA   //incio da ferramenta PARA
+8.       fator ← fator * i   //atribui a seguinte equação como novo valor para fator
+9.     FIM_PARA    //fim da ferramenta PARA
+10.    ESCREVA "O fatorial de ", n, " é: ", fator   //solicitei que escreva o valor de  e de fator
+11.  SENÃO   //incio da ferramenta SENAO
+12.    ESCREVA "O valor deve ser maior ou igual a zero!"   //solicitei que escreva a seguinte frase
+13.  FIM_SE   //fim da ferramenta SE
+14. FIM_ALGORITMO  //fim do algoritimo
 
 ```
 
@@ -340,21 +340,21 @@ I --LOOP--> E
 #### Pseudocódigo (1.0 ponto)
 
 ```
-ALGORITMO SerieFibonacci
-1. DECLARE n, a, b, termo_atual, i: INTEIRO
-2. INICIO
-3.   ESCREVA "Número de termos da série Fibonacci: "
-4.   LEIA n
-5.   a ← 0
-6.   b ← 1
-7.   PARA i DE 1 ATÉ n PASSO 1 FAÇA
-8.     ESCREVA a
-9.     termo_atual ← a + b
-10.    a ← b
-11.    b ← termo_atual
-12. FIM_PARA
-13. ESCREVA "FIM"
-14. FIM_ALGORITMO
+ALGORITMO SerieFibonacci    //titulo do algoritimo
+1. DECLARE n, a, b, termo_atual, i: INTEIRO   //declarei os seguintes elementos como INTEIRO
+2. INICIO  //inicio do algoritimo
+3.   ESCREVA "Número de termos da série Fibonacci: "  //solicitei a entrada do valor de n
+4.   LEIA n  //solicitei a leitura de n
+5.   a ← 0   //atribui um valor a "a"
+6.   b ← 1   //atribui um valor a "b"
+7.   PARA i DE 1 ATÉ n PASSO 1 FAÇA   //inicio da ferramenta PARA
+8.     ESCREVA a   //solicitei que escreva o seguinte elemento
+9.     termo_atual ← a + b  //atribui a seguinte equacao para o elemento "termo_atual"
+10.    a ← b    //atribui um valor para a
+11.    b ← termo_atual   //atribui o seguite valor para b
+12. FIM_PARA   //fim da ferramenta PARA
+13. ESCREVA "FIM"   //solicitei que escreva FIM
+14. FIM_ALGORITMO    //fim do algoritimo
 
 
 ```
@@ -395,27 +395,27 @@ E --> W
 #### Pseudocódigo (1.0 ponto)
 
 ```
-ALGORITMO InverterNumero
-1. DECLARE num, num_inv, digito: INTEIRO
-2. INICIO
-3.   ESCREVA "Digite um número inteiro: "
-4.   LEIA num
-5.   SE num >= 0 ENTÃO
-6.     num_inv ← 0
-7.     SE num > 0 ENTÃO
-8.       ENQUANTO num > 0 FAÇA
-9.         digito ← num % 10
-10.        num_inv ← num_inv * 10 + digito
-11.        num ← num // 10
-12.      FIM_ENQUANTO
-13.    SENÃO
-14.      ESCREVA "O número deve ser positivo!"
-15.    FIM_SE
-16.    ESCREVA "Número invertido:", num_inv
-17.  SENÃO
-18.    ESCREVA "O número deve ser não-negativo!"
-19.  FIM_SE
-20. FIM_ALGORITMO
+ALGORITMO InverterNumero   //titulo do algoritimo
+1. DECLARE num, num_inv, digito: INTEIRO    //declarei os seguites elementos como INTEIRO
+2. INICIO   //inicio do algoritimo
+3.   ESCREVA "Digite um número inteiro: "   //solicitei a entrada do valor de num
+4.   LEIA num    //solicitei a leitura do valor de num
+5.   SE num >= 0 ENTÃO    //inicio da ferramenta SE
+6.     num_inv ← 0   //atribui um valor para "num_inv"
+7.     SE num > 0 ENTÃO   //incio ferramenta SE 
+8.       ENQUANTO num > 0 FAÇA   //incio ferramenta ENQUANTO
+9.         digito ← num % 10  //atribui valor para o elemento
+10.        num_inv ← num_inv * 10 + digito    //atribui um novo valor para o elemento
+11.        num ← num // 10   //atribui valor para o elemento
+12.      FIM_ENQUANTO    //fim ferramenta ENQUANTO
+13.    SENÃO    //inicio da ferramenta SENAO
+14.      ESCREVA "O número deve ser positivo!"    //solicitei que escreva a segunte frase
+15.    FIM_SE   //fim da ferramenta SE
+16.    ESCREVA "Número invertido:", num_inv    //solicitei que escreva o valor do seguinte elemento
+17.  SENÃO    //inicio da ferramenta SENAO
+18.    ESCREVA "O número deve ser não-negativo!"   //solicitei a escritura da seguinte frase
+19.  FIM_SE    //fim da ferramenta SE
+20. FIM_ALGORITMO   //fim do algoritimo
 
 ```
 
